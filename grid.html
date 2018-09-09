@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Grid tutorials</title>
+    <style media="screen">
+      body{
+        color: #fff;
+        font-family: "Nunito Semibold";
+        text-align: center;
+      }
+      #container {
+        max-width: 960px;
+        margin: 0 auto;
+        display: grid;
+        /* grid-template-columns: 35% 30% 35%; */
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+      }
+      #container div {
+        background-color: #3bbced;
+        padding: 30px;
+      }
+      #container div:nth-child(2n+2) {
+        background: #777;
+      }
+      .nested {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+      }
+      .nested p {
+        border: 1px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div class="nested">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+      </div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+
+
+
+        <!-- <header class="Header">
+        <h2>Header</h2>
+      </header>
+      <div class="container">
+      <main class="Main">
+      <h2>Main</h2>
+    </main>
+    <div class="sidebar">
+    <aside class="Aside">
+    <h2>Aside</h2>
+    </aside>
+    <nav class="Nav">
+    <h2>Nav</h2>
+    </nav>
+    </div>
+    <footer class="Footer">
+    <h2>Header</h2>
+    </footer>
+    </div> -->
+  </body>
+</html>
